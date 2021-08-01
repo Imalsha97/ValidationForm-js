@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow-y:hidden;
+  background-image: linear-gradient(to right top, #5071f8, #8a77f8, #b27ef6, #d387f4, #ee92f2);
+  
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  background-image: linear-gradient(to right top, #e3e1f0, #e6e1ef, #e8e0ee, #ebe0ed, #ede0eb);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Open Sans;
+  position: relative;
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  
+}
+.content form .user-details, .comment-text, .selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box, .comment-text, .selection{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details, .comment-text , .selection ,.dot3, .dot4{
+  display: block;
+  font-size: 14pt;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: Open Sans;
+}
+.user-details .input-box input,.comment-text , .selection ,.dot2 , .dot3  {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 12pt;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  font-family: Open Sans;
+  
+  
+}
+.selection{
+ 
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 12pt;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  font-family: Open Sans;
+  color:lightgray;
+}
+
+#
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+ 
+}
+ form .value-details .value-title{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: Open Sans;
+  font-size: 14pt;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+   font-weight: bold;
+   
+   
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+  
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+  color: #000;
+  
+}
+.value{
+  font-family: Open Sans;
+  text-align: justify;
+
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   
+   border-color: #d9d9d9;
+   background: #000;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0;
+   text-align: center;
+
+ }
+ form .button input{
+   text-align:center;
+   height: 100%;
+   width: 20%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 10pt;
+   font-weight: bold;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   font-family: Open Sans;
+   background-image: linear-gradient(to right top, #5071f8, #8a77f8, #b27ef6, #d387f4, #ee92f2);
+  
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  
+  }
+
+  #demo6, #demo1, #demo2, #demo3, #demo4,#demo5{
+    color: red;
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
